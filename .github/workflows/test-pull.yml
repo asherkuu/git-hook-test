@@ -1,7 +1,7 @@
-# test-every-pull.yml
+# test-pull.yml
 
 # workflow의 이름. 나중에 해당 값을 사용할 수 있기 때문에 저는 유니크하게 사용합니다.
-name: "test-every-pull"
+name: "test-pull"
 
 # workflow를 동작하게하는 trigger입니다.
 # repository에 pull 이벤트가 발생할 때마다 실행될 거예요.
