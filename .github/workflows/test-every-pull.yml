@@ -1,11 +1,11 @@
-# test-every-push.yml
+# test-every-pull.yml
 
 # workflow의 이름. 나중에 해당 값을 사용할 수 있기 때문에 저는 유니크하게 사용합니다.
-name: "test-every-push"
+name: "test-every-pull"
 
 # workflow를 동작하게하는 trigger입니다.
-# repository에 push 이벤트가 발생할 때마다 실행될 거예요.
-# push 말고도 여러 가지 이벤트들이 있겠죠?
+# repository에 pull 이벤트가 발생할 때마다 실행될 거예요.
+# pull 말고도 여러 가지 이벤트들이 있겠죠?
 on: pull
 
 # job은 사용자가 정한 플랫폼을 통해 step이라는 일련의 과정을 실행할 수 있어요.
@@ -41,7 +41,7 @@ jobs:
         with:
           node-version: ${{ secrets.NODE_VERSION }}
 
-      # push할 때마다 npm을 install 해야될까요? (시간이 여간 많이 걸리는 게 아닐 텐데 ..)
+      # pull할 때마다 npm을 install 해야될까요? (시간이 여간 많이 걸리는 게 아닐 텐데 ..)
       # 아닙니다. 해당 프로젝트의 node_modules가 변했는지 안 변했는지를 이용해서
       # 모듈 변화가 있을 때만 npm install을 해줄 수도 있어요.
       - name: Cache node modules
