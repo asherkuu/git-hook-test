@@ -25,9 +25,9 @@ jobs:
 
       # Nodejs를 셋업합니다.
       - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.1.0
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
-        uses: actions/setup-node@v2.1.0
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -37,9 +37,9 @@ jobs:
       # path: 캐시될 파일의 위치입니다.
       # OS와 package-lock.json을 기준으로 node_modules의 캐시를 만듭니다.
       - name: Cache node modules
+        uses: actions/cache@v2.0.0
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
-        uses: actions/cache@v2.0.0
         env:
           cache-name: cache-node-modules
         with:
