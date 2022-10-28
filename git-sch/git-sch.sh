@@ -18,7 +18,7 @@ FileNm="$Ymd".md
 
 mkdir -p $FileDir
 
-echo "### $Ymd $Hmn 일기" >> $FileDir/$FileNm
+echo "### $Ymd $Hmn Write" >> $FileDir/$FileNm
 
 cd $GitDir
 git add .
