@@ -26,8 +26,6 @@ jobs:
       # Nodejs를 셋업합니다.
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2.1.0
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
         with:
           node-version: ${{ matrix.node-version }}
 
