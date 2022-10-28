@@ -47,6 +47,7 @@ jobs:
 
       # 일반적인 ci를 실행합니다.
       - name: CI
+        if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm ci
 
