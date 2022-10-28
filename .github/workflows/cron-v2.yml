@@ -41,5 +41,5 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo Cron !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,
+          echo Cron !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,
           echo Cron !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.
