@@ -5,7 +5,7 @@
 # exec git pull origin develop
 
 # rm -rf ./node_modules
-# npm install
+# npm ci
 
 
 # pm2 reload ecosystem.config.js
