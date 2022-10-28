@@ -34,17 +34,25 @@ jobs:
       # key: key를 활용해서 cache를 만들어 저장합니다.
       # path: 캐시될 파일의 위치입니다.
       # OS와 package-lock.json을 기준으로 node_modules의 캐시를 만듭니다.
+      # - name: Cache node modules
+      #   uses: actions/cache@v2.0.0
+      #   env:
+      #     cache-name: cache-node-modules
+      #     # ruleid: allowed-unsecure-commands
+      #     ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+      #   with:
+      #     path: node_modules
+      #     key: ${{ runner.OS }}-build-${{ hashFiles('package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.OS }}-build-${{ env.cache-name }}-
+      #       ${{ runner.OS }}-build-
+
       - name: Cache node modules
-        uses: actions/cache@v2.0.0
-        env:
-          cache-name: cache-node-modules
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+        uses: actions/cache@v2
+        id: cache
         with:
           path: node_modules
-          key: ${{ runner.OS }}-build-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
+          key: npm-packages-${{ hashFiles('**/package-lock.json') }}
 
       # 일반적인 ci를 실행합니다.
       - name: CI
