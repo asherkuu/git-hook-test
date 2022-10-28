@@ -6,9 +6,9 @@ D=$(date +%d)
 
 Ym=$Y-$M
 Ymd=$Y-$M-$D
-GitRep="git-diary"
+GitRep="git-hook-test"
 
-HomeDir="/home/ubuntu"
+HomeDir="/var/www"
 GitDir="$HomeDir/$GitRep"
 FileDir="$HomeDir/$GitRep/$Ym"
 FileNm="$Ymd".md
