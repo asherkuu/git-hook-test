@@ -2,14 +2,13 @@
 name: cron
 
 on:
-  schedule:
-    # 실제 스케쥴 작업이 시작될 cron을 등록하면 됩니다.
-    # 크론은 https://crontab.guru/ 여기서 확인하면 좋을 것 같습니다.
-    # At every 5th minute past hour 0. 0/5 * * * *
-    - cron: "0/5 * * * *"
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  cron:
+  build:
     runs-on: ubuntu-latest
     # 빌드 매트릭스는 여러가지 환경에서 실행될 수 있게 끔 도움을 줍니다.
     # 어차피 저는 테스트가 필요한 것이 아니고, 일반적인 node환경 만 필요하므로 이렇게만 설정해두겠습니다.
