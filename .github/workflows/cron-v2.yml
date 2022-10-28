@@ -3,7 +3,7 @@ name: cron-v2
 
 on:
   schedule:
-    - cron: "0/5 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   cron:
