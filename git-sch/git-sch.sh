@@ -20,4 +20,4 @@ echo "### $Ymd 일기" >> $FileDir/$FileNm
 cd $GitDir
 git add .
 git commit -m "commit $FileNm"
-git push origin master
+git push origin main
