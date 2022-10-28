@@ -1,0 +1,32 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Kubesec
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+  schedule:
+    - cron: '0/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
+
+      - name: Run a one-line script
+        run: echo Hello, world!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!,
+          echo test, and deploy your project!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!.
