@@ -12,6 +12,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
       - name: Run a one-line script
         run: echo Hello, world!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
