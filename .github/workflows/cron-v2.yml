@@ -1,5 +1,5 @@
 #
-name: cron
+name: cron-v2
 
 on:
   schedule:
