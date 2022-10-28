@@ -39,9 +39,8 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2.0.0
         env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
-        env:
           cache-name: cache-node-modules
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
         with:
           path: node_modules
           key: ${{ runner.OS }}-build-${{ hashFiles('package-lock.json') }}
