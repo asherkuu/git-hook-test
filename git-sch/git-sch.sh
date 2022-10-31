@@ -18,7 +18,7 @@ FileNm="$Ymd".md
 
 mkdir -p $FileDir
 
-echo "### $Ymd $Hmn Write" >> $FileDir/$FileNm
+echo "### $Ymd $Hmn Writed" >> $FileDir/$FileNm
 
 cd $GitDir
 git add .
