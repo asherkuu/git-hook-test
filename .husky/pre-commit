@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo ':::::::: Run husky post-merge ::::::::'
+echo ':::::::: Run husky pre-commit ::::::::'
 
 npx lint-staged
