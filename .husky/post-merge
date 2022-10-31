@@ -6,16 +6,5 @@ echo ':::::::: Run husky post-merge ::::::::'
 
 if ! git diff HEAD^ HEAD --exit-code -- ./package.json; then
     rm -rf node_modules
-    echo '::::::::::::::::::::::::::::::::::::::::' 
-    echo '::::::::::::::::::::::::::::::::::::::::' 
-    echo '::::::::::::::::::::::::::::::::::::::::' 
-    # npm ci
-fi
-
-if git diff HEAD^ HEAD --exit-code -- ./package.json; then
-    # ... code to handle a zero exit code here
-    echo '1'
-else
-    # ... code to handle a nonzero exit here
-    echo '2'
+    npm ci
 fi
