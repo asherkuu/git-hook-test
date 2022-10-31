@@ -5,5 +5,6 @@ echo ':::::::: Run husky post-merge ::::::::'
 echo ':::::::: Run husky post-merge ::::::::'
 
 if git diff HEAD^ HEAD --exit-code -- ./package.json; then
-    npm ci
+    rm -rf node_modules
+    # npm ci
 fi
